@@ -23,14 +23,14 @@ const REVIEWS = [
    Exemplo: { src: "fotos/sofa-1.jpg", alt: "Sofá cinza após a limpeza" }
    Enquanto src estiver vazio, aparece um espaço reservado. */
 const PHOTOS = [
-  { src: "", alt: "" }, { src: "", alt: "" }, { src: "", alt: "" },
-  { src: "", alt: "" }, { src: "", alt: "" }, { src: "", alt: "" }
+  { src: "fotos/foto1.jpg", alt: "Colchão após limpeza" }, { src: "fotos/foto2.jpg", alt: "Cadeira após limpeza" }, 
+  { src: "fotos/foto3.jpg", alt: "Sofá após limpeza" }, { src: "fotos/foto4.jpg", alt: "Cadeira após limpeza" }, { src: "fotos/foto7.jpg", alt: "Sofá após limpeza" }
 ];
 
 /* WhatsApp */
 const link = "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(MENSAGEM);
 document.querySelectorAll("[data-whats]").forEach(a => { a.href = link; a.target = "_blank"; a.rel = "noopener"; });
-document.getElementById("googleLink").href = GOOGLE_REVIEWS_URL;
+document.getElementById("googleLink").href = GOOGLE_REVIEWS_URL
 
 /* Carrossel infinito: repete os itens e anima a metade */
 function marquee(el, items, secondsPerItem) {
